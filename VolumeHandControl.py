@@ -69,17 +69,18 @@ while True:
 
         # calculating length between both required fingers
         length = math.hypot(x1-x2, y1-y2)
-
+        print(area)
         # Normalizing lengths and checked for a give distance, length = 280, area = 70000 to compare ratios of length and area
-        cmpLen = 280
-        cmpArea = 70000
+        cmpLen = 190
+        cmpArea = 140000
 
         # normalized length
-        length = (280*area)/cmpArea
+        length = (210*area)/cmpArea
+        print(length)
 
         # minimum length after which volume becomes 0 and will not decrease further even if length is decreased
         # drawing a dot to show we have reached minima volume
-        if length < 200:
+        if length < 140:
             cv2.circle(img, (cx, cy), 12, (16, 16, 18), cv2.FILLED)
             cv2.putText(img, "Muted", (10, 500), cv2.FONT_HERSHEY_PLAIN, 1.5, (18, 216, 250), 2)
 
@@ -96,8 +97,8 @@ while True:
 
         # change if command given inform of little finger shape
         if(litUp < litdown):
-            vol = np.interp(length, [80, 310], [minVol, maxVol])
-            print(vol)
+            # print(length)
+            vol = np.interp(length, [140, 210], [minVol, maxVol])
             per = max(0, int(((vol + 35)/35)*100))
             text = 'Volume : ' + str(per) + '%'
             volume.SetMasterVolumeLevel(vol, None)
