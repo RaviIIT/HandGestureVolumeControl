@@ -23,3 +23,9 @@ The distance between 2 specific landmarks is calculated
 Those 2 landmarks are tip of thumb and tip of it's adjacent finger, and based on that distance, volume ratio is adjusted
 
 I have mentioned everything in form of comments in my code.
+
+Working in light
+![IMG1](https://user-images.githubusercontent.com/75074493/176865650-9b60d847-476d-4102-ad18-b161caab9ff6.jpeg)
+
+Working in dark 
+![Test_3](https://user-images.githubusercontent.com/75074493/176866020-339df4d2-b99a-4ae6-b6f6-9220b88976ef.jpeg)
